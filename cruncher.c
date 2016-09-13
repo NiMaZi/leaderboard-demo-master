@@ -191,7 +191,7 @@ void query_line_handler(unsigned char nfields, char** tokens) {
 }
 
 int main(int argc, char *argv[]) {
-	//start=clock();
+	start=clock();
 	if (argc < 4) {
 		fprintf(stderr, "Usage: [datadir] [query file] [results file]\n");
 		exit(1);
@@ -248,7 +248,7 @@ int main(int argc, char *argv[]) {
 			results[result_idx].person_id, results[result_idx].knows_id);
 	}
 
-	//finish=clock();
-	//printf("%f\n", (double)(finish-start)/CLOCKS_PER_SEC);
+	finish=clock();
+	printf("%f\n", (double)(finish-start)/CLOCKS_PER_SEC);
 	return 0;
 }
